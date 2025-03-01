@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-200 my-5 mx-30">
+    <!-- Header section -->
+    <div class=" mx-auto bg-white  rounded-lg p-5">
+        <div class="flex justify-between items-center mb-5 h-32 rounded-md px-3 bg-gray-200">
+            <h1 class="text-2xl font-bold text-blue-800 ">Dev<span class="text-black">Board</span></h1>
+            <div class="flex items-center gap-4">
+                <span id="spanIdtwo" class="text-2xl font-semibold">25</span>
+                <button id="btnId" class="w-10 h-10 rounded-full bg-green-500 cursor-pointer"></button>
+            </div>
+        </div>
+    
+     <br> <br>
+     
+
+
+        <!-- Task Assigned -->
+        <div class="grid grid-cols-4 gap-5">
+            
+            <div class="col-span-3">
+                
+                <div class="grid grid-cols-4 gap-4 mb-5">
+                    <div class="h-24 flex justify-center items-center  py-4 rounded-md font-medium col-span-1 bg-gray-200">Task Assigned: <span id="spanIdOne" class="font-bold">05</span></div>
+                    <div id="discoverId" class="bg-blue-500 text-white flex justify-center items-center py-4 h-24 rounded-md font-medium col-span-2">Discover Something New Today !</div>
+                    <div class="bg-gray-200 h-24 flex justify-center items-center py-4 rounded-md font-medium col-span-1">Wed, Jul 28 2025</div>
+                </div> <hr class="border-t border-dotted border-gray-400"> <br>
+                
+                
+
+
+                <!-- Card Section -->
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Fist Card -->
+                    <div class="bg-gray-200 p-4 rounded-md ">
+                        <p class="text-sm text-gray-600 py-2">Shop Ease</p>
+                        <h2 class="font-bold text-lg">Fix Mobile Button Issue</h2> <br>
+                        <p class="bg-white p-2 rounded-md text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p> <br>
+                        <hr class="border-t border-dotted border-gray-400">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                                
+                                <div>
+                                    <button onclick="completeTask(this)" class="text-sm bg-blue-600 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div class="bg-gray-200 p-4 rounded-md ">
+                        <p class="text-sm text-gray-600 py-2">Cloud Sync</p>
+                        <h2 class="font-bold text-lg">Add Dark Mode</h2> <br>
+                        <p class="bg-white p-2 rounded-md text-sm text-gray-600">Store the user's preference in localStorage, update CSS vari</p> <br>
+                        <hr class="border-t border-dotted border-gray-400">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Deadline</p>
+                                <p>21 March 2025</p>
+                                </div>
+                                
+                                <div>
+                                    <button onclick="completeTask(this)" class="text-sm bg-blue-600 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Card -->
+                    <div class="bg-gray-200 p-4 rounded-md ">
+                        <p class="text-sm text-gray-600 py-2">SwiftPay</p>
+                        <h2 class="font-bold text-lg">Optimize  Home page</h2> <br>
+                        <p class="bg-white p-2 rounded-md text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p> <br>
+                        <hr class="border-t border-dotted border-gray-400">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Deadline</p>
+                                <p>21 March 2025</p>
+                                </div>
+                                
+                                <div>
+                                    <button onclick="completeTask(this)" class="text-sm bg-blue-600 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Forth Card -->
+                    <div class="bg-gray-200 p-4 rounded-md ">
+                        <p class="text-sm text-gray-600 py-2">Meta</p>
+                        <h2 class="font-bold text-lg">Add new emoji 🤲</h2> <br>
+                        <p class="bg-white p-2 rounded-md text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p> <br>
+                        <hr class="border-t border-dotted border-gray-400">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Deadline</p>
+                                <p>21 March 2025</p>
+                                </div>
+                                
+                                <div>
+                                    <button onclick="completeTask(this)" class="text-sm bg-blue-600 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Fifth Card -->
+                    <div class="bg-gray-200 p-4 rounded-md ">
+                        <p class="text-sm text-gray-600 py-2">Google LLC</p>
+                        <h2 class="font-bold text-lg">Integrate OpenAI API </h2> <br>
+                        <p class="bg-white p-2 rounded-md text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p> <br>
+                        <hr class="border-t border-dotted border-gray-400">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                                
+                                <div>
+                                    <button onclick="completeTask(this)" class="text-sm bg-blue-600 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Sixth Card -->
+                    <div class="bg-gray-200 p-4 rounded-md ">
+                        <p class="text-sm text-gray-600 py-2">Glassdoar</p>
+                        <h2 class="font-bold text-lg">Improve Job searching </h2> <br>
+                        <p class="bg-white p-2 rounded-md text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p> <br>
+                        <hr class="border-t border-dotted border-gray-400">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Deadline</p>
+                                <p>21 March 2025</p>
+                                </div>
+                                
+                                <div>
+                                    <button onclick="completeTask(this)" class="text-sm bg-blue-600 text-white px-2 py-1 rounded-md mt-2">Complete
+
+                                    </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+
+
+
+
+        <!-- Right Side Section -->
+                    <div class="col-span-1 bg-gray-200 p-4 rounded-md">
+                        <h3 class="font-bold text-lg">Activity Log</h3>
+                        <button onClick="clearHistory()" class="text-sm bg-red-500 text-white px-3 py-1 rounded-md mt-2">Clear History</button>
+                        <div id="activityLog" class="mt-2 text-sm text-gray-600">
+                            <p>You have completed the task Add Dark Mode at 12:48:15 PM</p>
+                            
+                        </div>
+                    </div>
+                </div>
+        </div>       
+    </div>
+
+
+
+
+    <script>
+
+    
+        document.getElementById("btnId").addEventListener("click", function() {
+            const colors = ["red", "blue", "green", "yellow"];
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            const selectedColor = colors[randomIndex];
+
+            if (selectedColor === "red") {
+                document.body.style.backgroundColor = "red";
+            } else if (selectedColor === "blue") {
+                document.body.style.backgroundColor = "blue";
+            } else if (selectedColor === "green") {
+                document.body.style.backgroundColor = "green";
+            } else if (selectedColor === "yellow") {
+                document.body.style.backgroundColor = "yellow";
+            }
+        });
+  
+
+
+        document.getElementById('discoverId').addEventListener('click', function() {
+        window.location.href = './inner.html';
+    });
+        let spanIdOne = 5;
+        let spanIdtwo = 23;
+
+        function completeTask(button) {
+            if (spanIdOne > 0) {
+                alert("Board update successfully");
+                
+                spanIdOne--;
+                spanIdtwo++;
+                document.getElementById('spanIdOne').innerText = spanIdOne;
+                document.getElementById('spanIdtwo').innerText = spanIdtwo;
+                
+                let log = document.getElementById('activityLog');
+                let entry = document.createElement('p');
+                entry.innerText = `I complite the task at ${new Date().toLocaleTimeString()}`;
+                log.appendChild(entry);
+                
+                button.classList.add('bg-gray-400', 'cursor-not-allowed');
+                button.classList.remove('bg-blue-500');
+                button.disabled = true;
+            }
+        }
+
+
+        function clearHistory() {
+            document.getElementById('activityLog').innerHTML = '';
+        } 
+    </script>
+
+    <!-- --------------------------------------- -->
+    
+       
+    
+</body>
+</html>

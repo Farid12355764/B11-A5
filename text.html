@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="w-[1000px] mx-auto bg-white shadow-md rounded-lg p-6">
+        <!-- Header Section -->
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-blue-700">Dev<span class="text-black">Board</span></h1>
+            <div class="flex items-center gap-4">
+                <span id="spanIdtwo" class="text-lg font-semibold">23</span>
+                <button class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></button>
+            </div>
+        </div>
+        
+        <!-- Fixed Grid Layout -->
+        <div class="grid grid-cols-4 gap-4">
+            <!-- Left Section (3 Columns) -->
+            <div class="col-span-3">
+                <!-- Top Info Section -->
+                <div class="grid grid-cols-4 gap-4 mb-6">
+                    <div class="bg-blue-100 text-center py-4 rounded-md font-medium col-span-1">Task Assigned: <span id="spanIdOne" class="font-bold">05</span></div>
+                    <div class="bg-blue-500 text-white text-center py-6 rounded-md font-medium col-span-2">Discover Something New Today!</div>
+                    <div class="bg-gray-200 text-center py-4 rounded-md font-medium col-span-1">Wed, Jul 28 2025</div>
+                </div>
+                
+                <!-- Task Cards Section -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-md shadow">
+                        <h2 class="font-bold text-lg">Fix Mobile Button Issue</h2>
+                        <p class="text-sm text-gray-600">Debug using Chrome DevTools...</p>
+                        <p class="text-xs text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button onclick="completeTask(this)" class="text-sm bg-blue-500 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-md shadow">
+                        <h2 class="font-bold text-lg">Add Dark Mode</h2>
+                        <p class="text-sm text-gray-600">Store user preference in localStorage...</p>
+                        <p class="text-xs text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button onclick="completeTask(this)" class="text-sm bg-blue-500 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-md shadow">
+                        <h2 class="font-bold text-lg">Optimize Home Page</h2>
+                        <p class="text-sm text-gray-600">Debug using Chrome DevTools...</p>
+                        <p class="text-xs text-gray-500 mt-2">Deadline: 21 March 2025</p>
+                        <button onclick="completeTask(this)" class="text-sm bg-blue-500 text-white px-2 py-1 rounded-md mt-2">Complete</button>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+            <!-- Right Section (1 Column) -->
+            <div class="col-span-1 bg-gray-100 p-4 rounded-md shadow">
+                <h3 class="font-bold text-lg">Activity Log</h3>
+                <button onclick="clearHistory()" class="text-sm bg-red-500 text-white px-3 py-1 rounded-md mt-2">Clear History</button>
+                <div id="activityLog" class="mt-2 text-sm text-gray-600">
+                    <p>You have completed the task Add Dark Mode at 12:48:15 PM</p>
+                    <p>You have completed the task Fix Mobile Button Issue at 12:30:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let spanIdOne = 5;
+        let spanIdtwo = 23;
+
+        function completeTask(button) {
+            if (spanIdOne > 0) {
+                alert("Board update successfully");
+                
+                spanIdOne--;
+                spanIdtwo++;
+                document.getElementById('spanIdOne').innerText = spanIdOne;
+                document.getElementById('spanIdtwo').innerText = completedCount;
+                
+                let log = document.getElementById('activityLog');
+                let entry = document.createElement('p');
+                entry.innerText = `Task completed at ${new Date().toLocaleTimeString()}`;
+                log.appendChild(entry);
+                
+                button.classList.add('bg-gray-400', 'cursor-not-allowed');
+                button.classList.remove('bg-blue-500');
+                button.disabled = true;
+            }
+        }
+
+        function clearHistory() {
+            document.getElementById('activityLog').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
